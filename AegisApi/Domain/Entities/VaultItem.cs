@@ -16,4 +16,6 @@ public class VaultItem
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     public Folder Folder { get; set; } = default!;
     public AegisUser User { get; set; } = default!;
+    public byte[] Version { get; set; } = [];
+    public ICollection<VaultItemTag> Tags { get; set; } = new List<VaultItemTag>();
 }
