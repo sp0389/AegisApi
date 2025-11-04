@@ -5,7 +5,9 @@ namespace AegisApi.Domain.Entities;
 
 public class AegisUser : IdentityUser
 {
+    public byte[] EncryptionSalt { get; set; } = [];
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     public ICollection<Folder> Folders { get; set; } = new List<Folder>();
     public ICollection<VaultItem> VaultItems { get; set; } = new List<VaultItem>();
     public ICollection<AuditLog> AuditLogs { get; set; } = new List<AuditLog>();

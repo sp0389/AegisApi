@@ -16,6 +16,6 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        _ = new EntityMapper(builder);
+        EntityMapper.Configure(builder);
     }
 }
